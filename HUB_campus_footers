@@ -1,22 +1,23 @@
-<!-- ABINGDON -->
-	<center>
-		<span style="font-size: 36px;">
-			Connect with us!<br>	
-		</span>
-		<span style="background-color: rgb(255, 255, 255); font-size: 24px;">
-			<a href="https://hf.church/abingdon" target="_blank">Abingdon Location page</a>
-			<br>
-			<a href="https://www.facebook.com/highlands.abi/" target="_blank" style="background-color: rgb(255, 255, 255);">Abingdon Facebook</a>
-			<br>
-		</span>
-		<span style="background-color: rgb(255, 255, 255); font-size: 24px;"><a href="https://www.instagram.com/hfsabingdon/" style="background-color: rgb(255, 255, 255);">Abingdon [HFS] Instagram</a>
-			<br>
-			<br>
-		</span></p>
-	</center>
-	
-<!-- BRISTOL -->
-	<center>
+{% assign campusfooter = 'Global' | PageParameter:'CampusId' %}
+
+{% if campusfooter == 1 %}
+<center> <!-- ABINGDON -->
+	<span style="font-size: 36px;">
+		Connect with us!<br>	
+	</span>
+	<span style="background-color: rgb(255, 255, 255); font-size: 24px;">
+		<a href="https://hf.church/abingdon" target="_blank">Abingdon Location page</a>
+		<br>
+		<a href="https://www.facebook.com/highlands.abi/" target="_blank" style="background-color: rgb(255, 255, 255);">Abingdon Facebook</a>
+		<br>
+	</span>
+	<span style="background-color: rgb(255, 255, 255); font-size: 24px;"><a href="https://www.instagram.com/hfsabingdon/" style="background-color: rgb(255, 255, 255);">Abingdon [HFS] Instagram</a>
+		<br>
+		<br>
+	</span>
+</center>
+{% elseif campusfooter == 2 %}
+    <center> <!-- BRISTOL -->
 		<span style="font-size: 36px;">
 			Connect with us!<br>	
 		</span>
@@ -34,9 +35,8 @@
 		</span>
 		
 	</center>
-	
-<!-- BLUEFIELD -->
-	<center>
+{% elseif campusfooter == 3 %}
+	<center> <!-- BLUEFIELD -->
 		<span style="font-size: 36px;">
 			Connect with us!<br>	
 		</span>
@@ -50,23 +50,21 @@
 		</span>
 		
 	</center>
-	
-<!-- MARION -->
-	<center>
-		<span style="font-size: 36px;">
-			Connect with us!<br>	
-		</span>
-		<span style="background-color: rgb(255, 255, 255); font-size: 24px;">
-			<a href="https://hf.church/marion" target="_blank">Marion Location page</a>
-			<br>
-			<a href="https://www.facebook.com/highlands.mar/" target="_blank" style="background-color: rgb(255, 255, 255);">Marion Facebook</a>
-			<br>
-		</span>
-		
-	</center>
-
-<!-- WISE -->
-	<center>
+{% elseif campusfooter == 5 %}
+		<center> <!-- MARION -->
+			<span style="font-size: 36px;">
+				Connect with us!<br>	
+			</span>
+			<span style="background-color: rgb(255, 255, 255); font-size: 24px;">
+				<a href="https://hf.church/marion" target="_blank">Marion Location page</a>
+				<br>
+				<a href="https://www.facebook.com/highlands.mar/" target="_blank" style="background-color: rgb(255, 255, 255);">Marion Facebook</a>
+				<br>
+			</span>
+			
+		</center>
+{% elseif campusfooter == 6 %}
+    <center> <!-- WISE -->
 		<span style="font-size: 36px;">
 			Connect with us!<br>	
 		</span>
@@ -77,4 +75,7 @@
 			<br>
 		</span>
 		
-	</center>
+	</center>	
+{% else %}
+
+{% endif %}
